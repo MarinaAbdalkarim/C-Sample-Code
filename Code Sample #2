@@ -1,0 +1,39 @@
+//Course:              CS2400-60 Computer Science 2
+//Name:                Abdalkarim, Marina
+//Assignment:          Programming Assignment #1
+//Remark:              Should list largest to smallest.
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+void largest_and_Smallest(int &a, int &b, int &c, int &d, int &smallest, int &largest);
+int main()
+{
+	int w, x, y, z, small, large;
+	cout << "Enter four numbers: ";
+	cin >> w >> x >> y >> z;
+	cout << endl;
+	largest_and_Smallest(w, x, y, z, small, large);
+	cout << "The smallest number is " << small << endl;
+	cout << "The largest number is " << large << endl;
+    return 0;
+}
+void largest_and_Smallest(int &a, int &b, int &c, int &d, int &smallest, int &largest)
+{
+	if (a > b)
+		largest = a;
+	else
+		largest = b;
+	if (c > largest)
+		largest = c;
+	if (d > largest)
+		largest = d;
+	if (a < b)
+		smallest = a;
+	else
+		smallest = b;
+	if (c < smallest)
+		smallest = c;
+	if (d < smallest)
+		smallest = d;
+}
