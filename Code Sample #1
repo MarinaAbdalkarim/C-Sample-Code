@@ -1,9 +1,6 @@
 //Course:              CS2400-60 Computer Science 2
 //Name:                Abdalkarim, Marina
 //Assignment:          Programming Assignment #1
-//Date Assigned:       9/05/18
-//Date due:            9/20/18
-//Date handed in:      9/18/18
 //Remark:              Should swap the numbers
 #include <iostream>
 #include <iomanip>
