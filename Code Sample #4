@@ -1,0 +1,28 @@
+//Course:              CS2400-60 Computer Science 2
+//Name:                Abdalkarim, Marina
+//Assignment:          Programming Assignment #1
+//Remark:              Should list largest to smallest.
+#include <iostream>
+#include <iomanip>
+using namespace std;
+void f();
+int x = 5;
+int main()
+{
+	cout << "x = " << x << endl;
+	int x = 6;
+	cout << "x = " << x << endl;
+	{
+		int x = 7;
+		cout << "x = " << x << endl;
+	}
+	cout << "x = " << x << endl;
+	f();
+	return 0;
+}
+void f()
+{
+	cout << "x = " << x << endl;	
+	int x = 8;
+	cout << "x = " << x << endl;
+}
