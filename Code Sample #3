@@ -1,0 +1,25 @@
+//Course:              CS2400-60 Computer Science 2
+//Name:                Abdalkarim, Marina
+//Assignment:          Programming Assignment #1
+//Remark:              Should keep counting.
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+void counting();
+int main()
+{
+	counting();
+	counting();
+	counting();
+	counting();
+	counting();
+	return 0;
+}
+void counting()
+{
+	static unsigned int count = 1;
+	cout << count << endl;
+	count++;
+}
