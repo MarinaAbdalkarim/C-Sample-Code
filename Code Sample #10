@@ -1,0 +1,76 @@
+//Course:              CS2400-60 Computer Science 2
+//Name:                Abdalkarim, Marina
+//Assignment:          Programming Assignment #1
+//Remark:              Should search for the value in the array.
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+void display_array(int x[], int y);
+void fill_array(int x[], int y);
+void sort(int x[], int y);
+void binary_search(int x[], int y);
+int main()
+{
+	const int SIZE = 10;
+	int a[SIZE];
+	cout << "Fill the array: ";
+	fill_array(a, SIZE);
+	cout << "The array is: ";
+	display_array(a, SIZE);
+	sort(a, SIZE);
+	display_array(a, SIZE);
+	binary_search(a, SIZE);
+	return 0;
+}
+void fill_array(int x[], int y)
+{
+	for (int i = 0; i < y; i++)
+		cin >> x[i];
+}
+void display_array(int x[], int y)
+{
+	for (int i = 0; i < y; i++)
+		cout << x[i] << endl;
+}
+void sort(int x[], int y)
+{
+	cout << "...Sorting..." << endl;
+	for (int i = 0; i < y; ++i)
+	{
+		int minSoFar = x[i];
+		for (int j = i + 1; j < y; ++j)
+		{
+			if (x[j] < minSoFar)
+			{
+				minSoFar = x[j];
+				int tmp = x[i];
+				x[i] = x[j];
+				x[j] = tmp;
+			}
+		}
+	}
+}
+void binary_search(int x[], int y)
+{
+	int find;
+	int mid;
+	bool a;
+	mid = x[y / 2];
+	cout << "Search: ";
+	cin >> find;
+	if (mid == find)
+		cout << "x[" << mid - 1 << "]" << endl;
+	else
+	{
+		for (int i = (y / 2); i > 0; i--)
+		{
+			if (x[i] == find)
+				cout << "x[" << i - 1 << "]" << endl;
+			else
+				a = false;
+		}
+	}
+	if (a == false)
+		cout << "-1" << endl;
+}
